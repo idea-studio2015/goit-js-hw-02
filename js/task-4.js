@@ -1,18 +1,9 @@
 'use strict';
 
-const formatString = function(string) {
-  const limitSymbol = 40;
-  const realLength = string.length;
+const formatString = (string, limitSymbol = 40) =>
+  string.length > limitSymbol ? `${string.slice(0, limitSymbol - 1)}...` : string;
 
-  if (realLength < limitSymbol) {
-    return string;
-  }
 
-  if (realLength > limitSymbol) {
-    const splicedLength = string.slice(40) + '...';
-    return splicedLength;
-  }
-};
 
 console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
 // вернется оригинальная строка

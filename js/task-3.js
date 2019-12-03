@@ -1,6 +1,6 @@
 'use stict';
 
-const findLongestWord = function(string) {
+const findLongestWord = function (string) {
   const words = string.split(' ');
   let largestWord = words[0];
   for (const word of words) {

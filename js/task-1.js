@@ -1,6 +1,6 @@
 'use strict';
 
-const logItems = function(array) {
+const logItems = function (array) {
   for (let i = 1; i < array.length + 1; i += 1) {
     console.log(`${i} -`, array[i - 1]);
   }
